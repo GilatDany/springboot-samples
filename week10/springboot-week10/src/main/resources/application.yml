@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/scheduled_db?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  mail:
+    host: smtp.qq.com #QQ邮箱SMTP服务器
+    username: 1272065161@qq.com #发件人邮箱
+    password: vzljehwotmymfjih #授权码
+    protocol: smtp #邮件发送协议
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465 #端口号465或587
+    properties.mail.display.sendmail: Java #发件人显示名称
+    properties.mail.display.sendname: Spring Boot Email #发件人显示名称
+    properties.mail.smtp.ssl.enable: true
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    default-encoding: utf-8
+
+logging:
+  level:
+    com.example: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# 天气 API 配置
+weather:
+  api:
+    url: https://pc2yvythc5.re.qweatherapi.com/v7/weather/24h
+    key: 773eefa30eb64fde9137d8a77f404724
+    location: 101190101
+    location-name: 南京市
+
+# 生日邮件配置
+birthday:
+  mail:
+    subject: "生日快乐！🎂"
+    template: "亲爱的 %s，\n\n今天是你的生日，祝你生日快乐！愿你健康快乐每一天！\n\n此致\n祝福团队"

@@ -1,0 +1,10 @@
+aliyun:
+  sms:
+    enable: true
+    endpoint: dypnsapi.aliyuncs.com
+    region-id: cn-hangzhou
+    access-key-id: LTAI5tLkmAwQh6ESXYM8Nvwe
+    access-key-secret: uA0inddD0MSATf2U0UfNMzlum00D7L
+    sign-name: "速通互联验证码"
+    template-code: "100001"
+    schema-name: 默认方案
